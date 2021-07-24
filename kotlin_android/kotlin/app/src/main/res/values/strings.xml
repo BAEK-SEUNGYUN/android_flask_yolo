@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">kotlin</string>
+    <string name="baseUrl">http://192.168.0.3:5000/</string>
+</resources>
