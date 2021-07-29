@@ -4,7 +4,7 @@ import cv2
 
 def webcam(url):
     print(url)
-    # url = "http://172.20.10.2:8080/video"
+    # url = "http://172.30.1.3:8080/video"
     # url = "http://192.168.219.185:8080/video"
     cap = cv2.VideoCapture(url)
 
@@ -20,7 +20,7 @@ def webcam(url):
     #              'yolo_v3/sheep.jpg', 'yolo_v3/kite.jpg']
 
     # 네트워크 생성
-    net = cv2.dnn.readNet(model, config)
+    net = cv2.dnn.readNetFromDarknet(model, config)
 
     if net.empty():
         print('Net open failed!')
@@ -104,10 +104,10 @@ def webcam(url):
 
         cv2.imshow('frame', dst)
         
-        if cv2.waitKey(1) == 27:
-            break
+    #     if cv2.waitKey(1) == 27:
+    #         break
 
-    cv2.destroyAllWindows()
+    # cv2.destroyAllWindows()
 
 
 # webcam('http://172.20.10.2:8080/vedio')
